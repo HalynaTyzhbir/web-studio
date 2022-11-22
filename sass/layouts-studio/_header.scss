@@ -55,7 +55,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-left: auto;
 
     > .contacts__item .contacts-link {
         padding: 0;
@@ -80,9 +79,4 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-
-    @include tablet {
-        display: flex;
-        align-items: center;
-    }
 }

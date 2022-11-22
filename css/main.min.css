@@ -586,7 +586,6 @@ a.current::after {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-left: auto;
   }
   .contacts > .contacts__item .contacts-link {
     padding: 0;
@@ -612,12 +611,6 @@ a.current::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .header__container {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .mob-menu {
