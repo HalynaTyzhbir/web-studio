@@ -7,8 +7,12 @@
     margin-bottom: 40px;
 
     @include tablet {
-    justify-content: center;
-        margin-bottom: 56px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
     }
 }
 

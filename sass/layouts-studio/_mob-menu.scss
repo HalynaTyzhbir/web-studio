@@ -16,8 +16,8 @@
     &.is-open {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: space-between;
+        gap: 64px;
         overflow: scroll;
         }
     }
@@ -25,9 +25,7 @@
     .menu {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 32px;
-        margin-bottom: 64px;
 
         &__link {
             font-size: 40px;
@@ -39,7 +37,6 @@
     .contacts {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 32px;
         margin-bottom: 64px;
 
@@ -87,18 +84,22 @@
         display: none;
     }
 
-    @include tablet {
-        display: none;
-    }
-
+    display: inline-block;
+    background-color: transparent;
+    
+    &.is-open {
     position: fixed;
     top: 22px;
     right: 22px;
     z-index: 2;
-    background-color: transparent;
+    }
 
     &:hover,
     &:focus {
         fill: var(--accent-color);
+    }
+
+    @include tablet {
+        display: none;
     }
 }

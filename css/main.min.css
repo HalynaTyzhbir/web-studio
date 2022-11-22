@@ -535,9 +535,6 @@ a.current::after {
   position: relative;
   border-bottom: 1px solid var(--header-border);
 }
-.header > .container {
-  max-width: 1200px;
-}
 
 .header__logo {
   padding: 24px 0;
@@ -584,7 +581,7 @@ a.current::after {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     display: flex;
     flex-direction: column;
@@ -593,10 +590,12 @@ a.current::after {
   }
   .contacts > .contacts__item .contacts-link {
     padding: 0;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
   .contacts {
+    display: flex;
     flex-direction: row;
     gap: 30px;
   }
@@ -609,6 +608,11 @@ a.current::after {
   }
 }
 
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media screen and (min-width: 768px) {
   .header__container {
     display: flex;
@@ -631,17 +635,15 @@ a.current::after {
   .mob-menu.is-open {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-between;
+    gap: 64px;
     overflow: scroll;
   }
 }
 .mob-menu .menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 32px;
-  margin-bottom: 64px;
 }
 .mob-menu .menu__link {
   font-size: 40px;
@@ -651,7 +653,6 @@ a.current::after {
 .mob-menu .contacts {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 32px;
   margin-bottom: 64px;
 }
@@ -684,10 +685,7 @@ a.current::after {
 }
 
 .menu-button {
-  position: absolute;
-  top: 22px;
-  right: 22px;
-  z-index: 2;
+  display: inline-block;
   background-color: transparent;
 }
 .menu-button .icon-close-menu {
@@ -699,13 +697,19 @@ a.current::after {
 .menu-button.is-open .icon-menu {
   display: none;
 }
+.menu-button.is-open {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 2;
+}
+.menu-button:hover, .menu-button:focus {
+  fill: var(--accent-color);
+}
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
-}
-.menu-button:hover, .menu-button:focus {
-  fill: var(--accent-color);
 }
 
 .hero {
@@ -1097,7 +1101,12 @@ a.current::after {
 @media screen and (min-width: 768px) {
   .filter-list {
     justify-content: center;
-    margin-bottom: 56px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
   }
 }
 

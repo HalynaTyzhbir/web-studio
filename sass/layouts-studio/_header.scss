@@ -1,10 +1,6 @@
 .header {
     position: relative;
 
-    > .container {
-        max-width: 1200px;
-    }
-
     border-bottom: 1px solid var(--header-border);
 }
 
@@ -55,7 +51,7 @@
         display: none;
     }
 
-    @include tablet {
+        @media screen and (min-width:768px) and (max-width:1199px) {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -63,9 +59,11 @@
 
     > .contacts__item .contacts-link {
         padding: 0;
+        font-size: 12px;
     }
     }
     @include desktop {
+        display: flex;
         flex-direction: row;
         gap: 30px;
     }
@@ -79,8 +77,12 @@
 }
 
 .header__container {
-    @include tablet {
     display: flex;
     align-items: center;
+    justify-content: space-between; 
+
+    @include tablet {
+        display: flex;
+        align-items: center;
     }
 }
