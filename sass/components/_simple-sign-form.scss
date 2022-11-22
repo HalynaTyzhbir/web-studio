@@ -1,0 +1,62 @@
+.sign-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+        @include desktop {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        }
+
+        &__label {
+            position: relative;
+
+            display: inline-block;
+        }
+
+        &__name {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+    
+            font-size: var(--second-font-size);
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: var(--footer-link-color);
+    
+            transition: transform var(--transition), scale var(--transition);
+        }
+
+        &__input {
+            width: 300px;
+            @include mobile {
+            width: 450px;
+            }
+            @include desktop {
+            width: 358px;
+            }
+            min-height: 50px;
+            padding: 15px;
+            font: inherit;
+    
+            font-size: var(--second-font-size);
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: var(--footer-link-color);
+    
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            outline: 1px solid rgba(255, 255, 255, 0.3);
+        }
+}
+
+.sign-form__label:focus-within>.sign-form__name,
+.sign-form__input:not(:placeholder-shown)+.sign-form__name {
+    transform: translateY(-55px);
+    scale: 0.8;
+}
+
+
+

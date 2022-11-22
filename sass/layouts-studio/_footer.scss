@@ -1,0 +1,132 @@
+.footer {
+    padding: 60px 0;
+    background-color: var(--main-bg);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+
+        @include desktop {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 90px;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 28px;
+        color: var(--primary-white-color);
+        @include desktop {
+        margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .footer__address,
+    .join,
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tablet-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    @include tablet {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 165px;
+    }
+
+    @include desktop {
+        gap: 90px;
+    }
+}
+
+.address {
+    font-style: normal;
+    text-align: center;
+    @include desktop {
+        text-align: left;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 12px;
+        @include desktop {
+        margin-bottom: 9px;
+        }
+        }
+    
+    &__link {
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--primary-white-color);
+    
+        transition: color var(--transition);
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+            }
+        }
+    
+    &__contacts {
+        padding: 0;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--footer-link-color);
+    
+        transition: color var(--transition);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
+    }
+}
+
+.join__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: var(--primary-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color var(--transition);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+            }
+}
+
+.callword {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: var(--main-font-size);
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+}
+
+
+
+
+
+

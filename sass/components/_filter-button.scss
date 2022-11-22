@@ -1,0 +1,23 @@
+.filter-button {
+    padding: 6px 22px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: var(--second-font-size);
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    background-color: #F5F4FA;
+
+    transition: color var(--transition), background-color var(--transition),
+        box-shadow var(--transition);
+
+    &:hover,
+    &:focus {
+        color: var(--primary-white-color);
+        background-color: var(--accent-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+

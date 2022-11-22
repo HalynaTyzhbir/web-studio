@@ -1,0 +1,14 @@
+.title {
+    margin-bottom: 30px;
+    @include font(28px, 1.18, 0.03em);
+    text-align: center;
+    color: var(--title-text-color);
+
+    @include desktop {
+        margin-bottom: 50px;
+    
+        @include font(36px, 1.17, null);
+    }
+
+
+}

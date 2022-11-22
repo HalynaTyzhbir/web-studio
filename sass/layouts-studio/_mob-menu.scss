@@ -1,0 +1,104 @@
+.mob-menu {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+            
+    width: 100vw;
+    height: 100vh;
+
+    padding: 48px 40px;
+    background-color: #ffffff;
+
+    @media screen and (max-width:767px) {
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        overflow: scroll;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        margin-bottom: 64px;
+
+        &__link {
+            font-size: 40px;
+            line-height: 1.18;
+            padding: 0;
+        }
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        margin-bottom: 64px;
+
+        >.contacts__item .contacts-link {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0;
+        }
+        >.contacts__item:hover .contacts-link,
+        .contacts__item:focus .contacts-link {
+            font-size: 34px;
+            line-height: 1.18;
+            color: var(--accent-color);
+        }
+    }
+
+    .mob-socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .mob-socials__item:not(:last-child) {
+            border-right: 1px solid rgba(33, 33, 33, 0.2);
+            padding-right: 10px;
+        }
+
+        .mob-socials__link {
+            font-weight: 500;
+            @include font (18px, 1.22, 0.02em);
+            color: var(--accent-color);
+        }
+    }
+}
+
+.menu-button {
+    .icon-close-menu {
+        display: none;
+    }
+
+    &.is-open .icon-close-menu {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 2;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+}
